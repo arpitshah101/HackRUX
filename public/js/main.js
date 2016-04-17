@@ -50,6 +50,13 @@ function gotBuffers( buffers ) {
 function doneEncoding( blob ) {
     Recorder.setupDownload( blob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav" );
     recIndex++;
+    var formData = new FormData();
+    formData.append("myFile", "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav");
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.scriptrapps.io/scripts/hackrux");
+    xhr.setRequestHeader("Authorization", "bearer Szg5NEFEOTk5MjpzY3JpcHRyOjg3RUJFQkQyMUEzNUU4RkJBNjgwQzEzN0Q3RjQxQUYz");
+    xhr.send(formData);
 }
 
 function toggleRecording( e ) {
