@@ -1,17 +1,13 @@
 # HackRUX
 
-Current Idea:
+Speech to Nest: 
 
-Home weather kiosk - nest and watson
+Input client audio command, convert to speech with Google Web Speech 
+API. Send text to Scriptr which uses Wit.AI to understand intent and 
+keywords and then use the Nest API to change the temperature.
 
-by priorities we need to do: 
+Watson Text to Speech API is used to vocalize temperature changes and 
+output to the user. 
 
-	i) control nest through speech
-		a) change temperature
-		b) current temperature
-
-	ii) check weather outside every morning
-		a) get weather from online
-		b) informing user of weather outside
-
-	iii) announce schedule based on google calender
+Built by Arpit Shah, Wael Ayadi, and Waseem Khan.
+--with help from Ed Borden
